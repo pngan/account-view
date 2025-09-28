@@ -1,0 +1,80 @@
+openapi: 3.0.0
+info:
+  title: Personal Finance API
+  version: 1.0.0
+paths:
+  /api/transactions:
+    get:
+      summary: Get a list of transactions
+      responses:
+        '200':
+          description: A list of transactions
+  /api/transactions/{id}:
+    get:
+      summary: Get a single transaction
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A single transaction
+    put:
+      summary: Update a transaction
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: The updated transaction
+  /api/transactions/{id}/attachments:
+    post:
+      summary: Attach an image to a transaction
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '201':
+          description: The attachment was created
+  /api/categories:
+    get:
+      summary: Get a list of categories
+      responses:
+        '200':
+          description: A list of categories
+    post:
+      summary: Create a new category
+      responses:
+        '201':
+          description: The category was created
+  /api/categories/{id}:
+    put:
+      summary: Update a category
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: The updated category
+    delete:
+      summary: Delete a category
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: The category was deleted
