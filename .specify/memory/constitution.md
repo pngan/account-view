@@ -1,50 +1,52 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 0.0.0 → 1.0.0
+- List of modified principles:
+  - [PRINCIPLE_1_NAME] → I. Technology Stack
+  - [PRINCIPLE_2_NAME] → II. Database
+  - [PRINCIPLE_3_NAME] → III. Authentication and Authorization
+  - [PRINCIPLE_4_NAME] → IV. Configuration and Secrets
+  - [PRINCIPLE_5_NAME] → V. Development and Tooling
+- Added sections:
+  - UI and Deployment
+- Removed sections:
+  - None
+- Templates requiring updates:
+  - ✅ .specify/templates/plan-template.md
+  - ⏳ .specify/templates/spec-template.md
+  - ⏳ .specify/templates/tasks-template.md
+  - ✅ .gemini/commands/constitution.toml
+- Follow-up TODOs:
+  - None
+-->
+# account-view Constitution
+<!-- This constitution outlines the core principles and standards for the account-view project. -->
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Technology Stack
+The project MUST use the .NET Aspire v9.5 template with .NET 10, ASP.NET Core Blazor in Interactive Server render mode, and the latest version of C#.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Database
+PostgreSQL MUST be used for all SQL storage.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### IV. Configuration and Secrets
+Configuration and secrets MUST be managed using .env files.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### V. Development and Tooling
+Development MUST utilize the .NET Aspire command-line tools and templates.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+## UI and Deployment
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+- **User Interface:** Web pages MUST be sleek and modern, using modern CSS.
+- **Deployment:** The project MUST be easily deployable to production using Docker Compose.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Development Workflow
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+All development should follow the Red-Green-Refactor cycle of Test-Driven Development (TDD). All new features or bug fixes must start with a failing test.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This Constitution is the supreme governing document for this project. All development practices, architectural decisions, and code contributions must align with its principles. Amendments to this constitution require a formal proposal, review, and approval process.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-09-28 | **Last Amended**: 2025-09-28

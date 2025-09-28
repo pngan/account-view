@@ -116,6 +116,9 @@ Task: "Integration test auth in tests/integration/test_auth.py"
    - Setup → Tests → Models → Services → Endpoints → Polish
    - Dependencies block parallel execution
 
+5. **TDD Compliance**:
+   - All implementation tasks must have a corresponding failing test task that precedes it.
+
 ## Validation Checklist
 *GATE: Checked by main() before returning*
 

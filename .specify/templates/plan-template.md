@@ -47,7 +47,12 @@
 ## Constitution Check
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- **I. Technology Stack**: Does the plan adhere to .NET Aspire v9.5, .NET 10, ASP.NET Core Blazor (Interactive Server), and latest C#?
+- **II. Database**: Is PostgreSQL being used for SQL storage?
+- **IV. Configuration and Secrets**: Are .env files used for secrets?
+- **V. Development and Tooling**: Are the .NET Aspire command-line tools and templates being used?
+- **UI and Deployment**: Does the plan account for a sleek, modern UI and deployment with Docker Compose?
+- **Development Workflow**: Does the plan incorporate TDD?
 
 ## Project Structure
 
@@ -216,4 +221,4 @@ directories captured above]
 - [ ] Complexity deviations documented
 
 ---
-*Based on Constitution v2.1.1 - See `/memory/constitution.md`*
+*Based on Constitution v1.0.0 - See `.specify/memory/constitution.md`*
